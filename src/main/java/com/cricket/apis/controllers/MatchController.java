@@ -19,17 +19,17 @@ public class MatchController {
     public MatchController(MatchService matchService){
         this.matchService = matchService;
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://cricket-geek-frontend-hm77.vercel.app")
     @GetMapping("/live")
     public ResponseEntity<List<Match>> getLiveMatches(){
         return new ResponseEntity<>(this.matchService.getLiveMatches(), HttpStatus.OK);
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://cricket-geek-frontend-hm77.vercel.app")
     @GetMapping
     public ResponseEntity<List<Match>> getAllMatches(){
         return new ResponseEntity<>(this.matchService.getAllMatches(),HttpStatus.OK);
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://cricket-geek-frontend-hm77.vercel.app")
     @GetMapping("/point-table")
     public ResponseEntity<?> getPointTable(){
         return new ResponseEntity<>(this.matchService.getPointTable(),HttpStatus.OK);
